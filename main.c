@@ -1,11 +1,6 @@
 #include <stdio.h>
+#include <math.h>
 
-int main() {
-	//separate(867);
-	dias(259201);
-
-	return 0;
-}
 
 int sum(int a, int b){
 	return a+b;
@@ -45,3 +40,32 @@ int dias (int s) {
 	printf ("days: %i\n", d);
 	return sr;
 }
+
+float devolucionVx (float Dx ,float Dt) {
+	float Vx = Dx / Dt ;
+	printf ("Vx = %f\n ", Vx) ;
+	return Vx ;
+}
+
+float devolucionDx (float Dt , float Vx) {
+	float Dx = Vx * Dt ;
+	printf ("Dx = %f\n " , Dx) ;
+	return Dx ; 
+}
+
+float devolucionDt (float Dx , float Vx) {
+	float Dt = Dx / Vx ;
+	printf ("Dt = %f\n " , Dt) ;
+	return Dt ; 
+}
+
+int main() {
+	//separate(867);
+	//dias(259201);
+	devolucionVx(10 , 5) ;
+	devolucionDx(3 , 5) ;
+	devolucionDt(50 , 10) ; 
+
+	return 0;
+}
+
